@@ -239,6 +239,15 @@ defaults:
       author_profile: true
       share: true
       comments: true
+    # _gallery
+  - scope:
+      path: ""
+      type: gallery
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
   # _portfolio
   - scope:
       path: ""
@@ -326,7 +335,7 @@ compress_html:
 
 gallery:
   dir: photos               # Path to the gallery
-  symlink: false            # false: copy images into _site. true: create symbolic links (saves disk space)
+  symlink: true            # false: copy images into _site. true: create symbolic links (saves disk space)
   title: "Photos"           # Title for gallery index page
   title_prefix: "Photos: "  # Title prefix for gallery pages. Gallery title = title_prefix + gallery_name
   sort_field: "date_time"   # How to sort galleries on the index page.
@@ -334,7 +343,7 @@ gallery:
   thumbnail_size:
     x: 400                  # max width of thumbnails (in pixels)
     y: 400                  # max height of thumbnails (in pixels)
-  # The following options are for individual galleries.
+  # # The following options are for individual galleries.
   galleries:
     chile_trip:
       best_image: IMG_1068.JPG  # The image to show on the gallery index page. Defaults to the last image.
